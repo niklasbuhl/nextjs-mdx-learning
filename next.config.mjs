@@ -1,9 +1,13 @@
 /** @type {import('next').NextConfig} */
 
+function imageLoader(src) {
+  return `/nextjs-mdx-learning/${src}`
+}
+
 const nextConfig = {
   images: {
-    loader: 'custom',
-    loaderFile: './src/app/image-loader.js',
+    loader: imageLoader,
+    // loaderFile: './src/app/image-loader.js',
   },
   basePath: '/nextjs-mdx-learning',
   // assetPrefix: '/nextjs-mdx-learning/',
