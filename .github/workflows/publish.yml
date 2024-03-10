@@ -21,6 +21,7 @@ jobs:
 
     env:
       test: a
+      NEXT_PUBLIC_NODE_ENV: test
 
     steps:
       - name: Checkout
