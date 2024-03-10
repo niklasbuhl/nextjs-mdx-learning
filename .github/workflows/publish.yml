@@ -19,9 +19,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-    env:
-      NODE_ENV: testingA
-
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -35,7 +32,7 @@ jobs:
         #   static_site_generator: next
 
       - name: Build with Next.js
-        run: npx next build
+        run: NODE_ENV=test npx next build
 
       - name: Disable telemetry
         run: npx next telemetry disable
