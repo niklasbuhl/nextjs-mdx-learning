@@ -19,10 +19,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-    env:
-      test: a
-      NEXT_PUBLIC_NODE_ENV: test
-
     steps:
       - name: Checkout
         uses: actions/checkout@v4
