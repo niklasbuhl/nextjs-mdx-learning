@@ -1,11 +1,14 @@
 /** @type {import('next').NextConfig} */
 
+const basePath =
+  process.env.NODE_ENV === 'production' ? '/nextjs-mdx-learning' : ''
+
 const nextConfig = {
-  basePath: '/nextjs-mdx-learning',
+  basePath: basePath,
   output: 'export',
   reactStrictMode: true,
   images: {
-    unoptimized: true,
+    // unoptimized: true,
     loader: 'custom',
     loaderFile: './image-loader.js',
   },

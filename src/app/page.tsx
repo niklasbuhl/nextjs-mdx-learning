@@ -1,7 +1,15 @@
+'use client'
+
 import Image from 'next/image'
 import styles from './page.module.css'
+import { useEffect } from 'react'
+import Link from 'next/link'
 
 export default function Home() {
+  useEffect(() => {
+    console.log(process.env.NODE_ENV)
+  }, [])
+
   return (
     <main className={styles.main}>
       <div className={styles.description}>
@@ -38,6 +46,8 @@ export default function Home() {
           priority
         />
       </div>
+
+      <Link href="/now">Now</Link>
 
       <div className={styles.grid}>
         <a
