@@ -8,7 +8,7 @@ import Link from 'next/link'
 export default function Home() {
   useEffect(() => {
     console.log(process.env.NODE_ENV)
-    console.log(process.env.NEXT_PUBLIC_NODE_ENV)
+    // console.log(process.env.NEXT_PUBLIC_NODE_ENV)
   }, [])
 
   return (
